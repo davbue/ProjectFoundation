@@ -1,0 +1,97 @@
+﻿<Window x:Class="ProjectFoundation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:ProjectFoundation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1280" WindowState="Normal" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen" Background="Transparent">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="30"/>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" CornerRadius="10 0 0 10">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                    <GradientStop Color="#706dff" Offset="0"/>
+                    <GradientStop Color="#a37dff" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid Width="300" Background="Transparent">
+                <StackPanel Margin="0 30 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="APPLICATION" Foreground="White" FontSize="25" FontWeight="DemiBold" Margin="30 0 50 0"/>
+                        <Button x:Name="BackwardBtn" BorderThickness="0" Background="Transparent" Padding="0" Click="BackwardBtn_Click">
+                            <materialDesign:PackIcon Kind="arrowleft" Foreground="White" Height="20" Width="20" VerticalAlignment="Center" Margin="0 0 10 0"/>
+                        </Button>
+                        <Button x:Name="ForwardBtn" BorderThickness="0" Background="Transparent" Padding="0" Click="ForwardBtn_Click">
+                            <materialDesign:PackIcon Kind="ArrowRight" Foreground="White" Height="20" Width="20" VerticalAlignment="Center"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Margin="0 30 0 0" x:Name="NavBar">
+                    <TextBlock Margin="30 100 0 10" Text="EXPLORE" Foreground="White" FontSize="17" FontWeight="DemiBold"/>
+                    <StackPanel Orientation="Horizontal" Height="45" Opacity="0.8" x:Name="ExploreNav" MouseDown="NavPanelMouseDown">
+                        <StackPanel.Background>
+                            <SolidColorBrush Opacity="0.3" Color="White"/>
+                        </StackPanel.Background>
+                        <Rectangle Fill="White" Width="5"/>
+                        <materialDesign:PackIcon Kind="Explore" Foreground="White" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
+                        <TextBlock Text="Explore" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40" Opacity="0.8">
+                        <StackPanel.Background>
+                            <SolidColorBrush Opacity="0" Color="White"/>
+                        </StackPanel.Background>
+                        <Rectangle Visibility="Hidden" Fill="White" Width="5"/>
+                        <materialDesign:PackIcon Kind="ThumbsUp" Foreground="White" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
+                        <TextBlock Text="Recommended" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
+                    </StackPanel>
+                    <TextBlock Margin="30 30 0 10" Text="Local" Foreground="White" FontSize="17" FontWeight="DemiBold"/>
+                    <StackPanel Orientation="Horizontal" Height="40" Opacity="0.8" x:Name="LibraryNav" MouseDown="NavPanelMouseDown">
+                        <StackPanel.Background>
+                            <SolidColorBrush Opacity="0" Color="White"/>
+                        </StackPanel.Background>
+                        <Rectangle Visibility="Hidden" Fill="White" Width="5"/>
+                        <materialDesign:PackIcon Kind="LibraryMovie" Foreground="White" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
+                        <TextBlock Text="Library" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40" Opacity="0.8" x:Name="DownloadsNav" MouseDown="NavPanelMouseDown">
+                        <StackPanel.Background>
+                            <SolidColorBrush Opacity="0" Color="White"/>
+                        </StackPanel.Background>
+                        <Rectangle Visibility="Hidden" Fill="White" Width="5"/>
+                        <materialDesign:PackIcon Kind="Downloads" Foreground="White" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
+                        <TextBlock Text="Downloads" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40" Opacity="0.8">
+                        <StackPanel.Background>
+                            <SolidColorBrush Opacity="0" Color="White"/>
+                        </StackPanel.Background>
+                        <Rectangle Visibility="Hidden" Fill="White" Width="5"/>
+                        <materialDesign:PackIcon Kind="Queue" Foreground="White" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
+                        <TextBlock Text="Personal List" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Column="1" Background="#f0f3f8" CornerRadius="0 10 10 0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Height="30"/>
+                <Border Grid.Row="1" x:Name="ViewHolder">
+
+                </Border>
+            </Grid>
+        </Border>
+        
+    </Grid>
+</Window>
