@@ -6,6 +6,8 @@ using System.Windows.Input;
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
 using ProjectFoundation.Views;
+using MaterialDesignThemes.Wpf;
+using System.Windows.Media;
 
 namespace ProjectFoundation
 {
@@ -75,10 +77,12 @@ namespace ProjectFoundation
                     StackPanel panel = control as StackPanel;
                     panel.Children[0].Visibility = Visibility.Hidden;
                     panel.Background.Opacity = 0;
+                    ((PackIcon)panel.Children[1]).Foreground = Brushes.Black;
                 }
             }
             navPanel.Children[0].Visibility = Visibility.Visible;
             navPanel.Background.Opacity = 0.3;
+            ((PackIcon)navPanel.Children[1]).Foreground = (LinearGradientBrush)FindResource("Gradient1");
         }
 
         private void ChangeView(UserControl userControl)

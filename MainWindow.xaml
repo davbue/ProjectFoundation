@@ -18,80 +18,102 @@
         <Border Grid.Column="0" CornerRadius="10 0 0 10">
             <Border.Background>
                 <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
-                    <GradientStop Color="#706dff" Offset="0"/>
-                    <GradientStop Color="#a37dff" Offset="1"/>
+                    <GradientStop Color="#d7dee4" Offset="0"/>
+                    <GradientStop Color="#d7dee4" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
             <Grid Width="300" Background="Transparent">
                 <StackPanel Margin="0 30 0 0">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="APPLICATION" Foreground="White" FontSize="25" FontWeight="DemiBold" Margin="30 0 50 0"/>
-                        <Button x:Name="BackwardBtn" BorderThickness="0" Background="Transparent" Padding="0" Click="BackwardBtn_Click">
-                            <materialDesign:PackIcon Kind="arrowleft" Foreground="White" Height="20" Width="20" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        </Button>
-                        <Button x:Name="ForwardBtn" BorderThickness="0" Background="Transparent" Padding="0" Click="ForwardBtn_Click">
-                            <materialDesign:PackIcon Kind="ArrowRight" Foreground="White" Height="20" Width="20" VerticalAlignment="Center"/>
-                        </Button>
+                        <TextBlock Text="APPLICATION" Foreground="Black" FontSize="25" FontWeight="DemiBold" Margin="30 0 50 0"/>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Margin="0 30 0 0" x:Name="NavBar">
-                    <TextBlock Margin="30 100 0 10" Text="EXPLORE" Foreground="White" FontSize="17" FontWeight="DemiBold"/>
+                    <TextBlock Margin="30 100 0 10" Text="EXPLORE" Foreground="Black" FontSize="17" FontWeight="DemiBold"/>
                     <StackPanel Orientation="Horizontal" Height="45" Opacity="0.8" x:Name="ExploreNav" MouseDown="NavPanelMouseDown">
                         <StackPanel.Background>
                             <SolidColorBrush Opacity="0.3" Color="White"/>
                         </StackPanel.Background>
-                        <Rectangle Fill="White" Width="5"/>
-                        <materialDesign:PackIcon Kind="Explore" Foreground="White" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
-                        <TextBlock Text="Explore" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
+                        <Rectangle Fill="{StaticResource Gradient1}" Width="5"/>
+                        <materialDesign:PackIcon Foreground="{StaticResource Gradient1}" Kind="Explore" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
+                        <TextBlock Text="Explore" Foreground="Black" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Height="40" Opacity="0.8">
                         <StackPanel.Background>
                             <SolidColorBrush Opacity="0" Color="White"/>
                         </StackPanel.Background>
-                        <Rectangle Visibility="Hidden" Fill="White" Width="5"/>
-                        <materialDesign:PackIcon Kind="ThumbsUp" Foreground="White" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
-                        <TextBlock Text="Recommended" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
+                        <Rectangle Visibility="Hidden" Fill="{StaticResource Gradient1}" Width="5"/>
+                        <materialDesign:PackIcon Kind="ThumbsUp" Foreground="Black" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
+                        <TextBlock Text="Recommended" Foreground="Black" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
                     </StackPanel>
-                    <TextBlock Margin="30 30 0 10" Text="Local" Foreground="White" FontSize="17" FontWeight="DemiBold"/>
+                    <TextBlock Margin="30 30 0 10" Text="Local" Foreground="Black" FontSize="17" FontWeight="DemiBold"/>
                     <StackPanel Orientation="Horizontal" Height="40" Opacity="0.8" x:Name="LibraryNav" MouseDown="NavPanelMouseDown">
                         <StackPanel.Background>
                             <SolidColorBrush Opacity="0" Color="White"/>
                         </StackPanel.Background>
-                        <Rectangle Visibility="Hidden" Fill="White" Width="5"/>
-                        <materialDesign:PackIcon Kind="LibraryMovie" Foreground="White" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
-                        <TextBlock Text="Library" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
+                        <Rectangle Visibility="Hidden" Fill="{StaticResource Gradient1}" Width="5"/>
+                        <materialDesign:PackIcon Kind="LibraryMovie" Foreground="Black" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
+                        <TextBlock Text="Library" Foreground="Black" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Height="40" Opacity="0.8" x:Name="DownloadsNav" MouseDown="NavPanelMouseDown">
                         <StackPanel.Background>
                             <SolidColorBrush Opacity="0" Color="White"/>
                         </StackPanel.Background>
-                        <Rectangle Visibility="Hidden" Fill="White" Width="5"/>
-                        <materialDesign:PackIcon Kind="Downloads" Foreground="White" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
-                        <TextBlock Text="Downloads" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
+                        <Rectangle Visibility="Hidden" Fill="{StaticResource Gradient1}" Width="5"/>
+                        <materialDesign:PackIcon Kind="Downloads" Foreground="Black" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
+                        <TextBlock Text="Downloads" Foreground="Black" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Height="40" Opacity="0.8">
                         <StackPanel.Background>
                             <SolidColorBrush Opacity="0" Color="White"/>
                         </StackPanel.Background>
-                        <Rectangle Visibility="Hidden" Fill="White" Width="5"/>
-                        <materialDesign:PackIcon Kind="Queue" Foreground="White" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
-                        <TextBlock Text="Personal List" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
+                        <Rectangle Visibility="Hidden" Fill="{StaticResource Gradient1}" Width="5"/>
+                        <materialDesign:PackIcon Kind="Queue" Foreground="Black" Height="25" Width="25" VerticalAlignment="Center" Margin="25 0 0 0"/>
+                        <TextBlock Text="Personal List" Foreground="Black" VerticalAlignment="Center" Margin="10 0 0 0" FontSize="13"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>
         </Border>
-        <Border Grid.Column="1" Background="#f0f3f8" CornerRadius="0 10 10 0">
+        <Border Grid.Column="1" Background="#f8f8f8" CornerRadius="0 10 10 0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Opacity="0.1" Direction="-99" ShadowDepth="4"/>
+            </Border.Effect>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Height="30"/>
-                <Border Grid.Row="1" x:Name="ViewHolder">
+                <Grid Grid.Row="0" Height="40"/>
+                <Grid Grid.Row="1" Height="30" Margin="50 0 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*" MaxWidth="400"/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Style="{StaticResource MaterialDesignToolForegroundButton}" Click="BackwardBtn_Click">
+                        <materialDesign:PackIcon Kind="ChevronLeft" Height="20" Width="20" Opacity="0.5"/>
+                    </Button>
+                    <Button Grid.Column="1" Margin="5 0 0 0" Style="{StaticResource MaterialDesignToolForegroundButton}" Click="ForwardBtn_Click">
+                        <materialDesign:PackIcon Kind="ChevronRight" Height="20" Width="20" Opacity="0.5"/>
+                    </Button>
+                    <TextBlock Margin="10 0 0 0" Grid.Column="2" Text="Torrentino" VerticalAlignment="Center" Opacity="0.5"/>
+                    <materialDesign:PackIcon Margin="10 0 0 0" Grid.Column="3" VerticalAlignment="Center" Kind="ChevronRight" Height="11" Width="11" Opacity="0.5"/>
+                    <TextBlock Margin="10 0 0 0" Grid.Column="4" Text="Explore" VerticalAlignment="Center" Opacity="0.5"/>
+                    <Button Grid.Column="5" Margin="5 0 0 0" Style="{StaticResource MaterialDesignToolForegroundButton}">
+                        <materialDesign:PackIcon Kind="Search" Height="20" Width="20" Opacity="0.5"/>
+                    </Button>
+                    <TextBox Grid.Column="6" materialDesign:HintAssist.Hint="Search" Foreground="Black" />
+                </Grid>
+                <Border Grid.Row="2" x:Name="ViewHolder">
 
                 </Border>
             </Grid>
         </Border>
-        
     </Grid>
 </Window>
